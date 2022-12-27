@@ -10,9 +10,9 @@ After cloning the repository, all we need is to install ansible-navigator from t
 pip install -e .
 ```
 
-### Configuring VS code:
+### Configure VS code:
 
-Once we are inside vscode, we need to generate the launch configuration file 'launch.json'. There are two ways to do so.
+Once we are inside vscode, we need to generate the configuration file 'launch.json'. There are two ways to do so.
 
 **Method 1:**  Use Run and Debug View
 
@@ -70,14 +70,12 @@ Ansible-Navigator comes in with bunch of [commands]. To debug around any specifi
 
 **Example:**                                                                    
 * To debug subcommand `ansible-navigator images`, add one more attribute as `"args": ["images"]` in our previously configured launch.json.
-* To debug subcommand `ansible-navigator collections`, add one more attribute as `"args": ["collections"]` in launch.json, And so on.                 
+* To debug subcommand `ansible-navigator collections`, add one more attribute as `"args": ["collections"]` in launch.json, and so on.                 
 * Moreover, to debug subcommands with some parameter use `"args": ["subcommand-name", "--", "parameter"]`
-* For example adding an attribute as `"args": ["exec", "--", "pwd"]` in launch.json will ensure to debug the command                               
-`ansible-navigator exec -- pwd`                                              
-* While debugging any subcommand with arguments, make sure to use one 'args' entry at a time in our configuration                                                     
-(comment/remove the ones not in use).
+* For example adding an attribute as `"args": ["exec", "--", "pwd"]` in launch.json will ensure to debug the command `ansible-navigator exec -- pwd`                                 
+* While debugging any subcommand with arguments, make sure to use one *args* entry at a time in our configuration (comment/remove the ones not in use).
 
-Here is an example of debugging `ansible-navigator exec -- pwd` using args attribute-
+Here is an example of debugging `ansible-navigator exec -- pwd` using *args* attribute-
 
 ```
 {
